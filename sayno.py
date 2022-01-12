@@ -1,15 +1,3 @@
-import json
-
-def main():
-    top_html = get_top_html()
-    bottom_html = get_bottom_html()
-    word_dict = get_word_dict()
-    middle_html = get_middle_html(word_dict)
-    the_html = "".join([top_html, middle_html, bottom_html])
-    print(the_html)
-    with open("index.html", "w") as file:
-        file.write(the_html)
-
 def get_word_dict():
     unsorted_word_dict = {
     "Awesome (strong skill)":"lee high",
@@ -17,7 +5,6 @@ def get_word_dict():
     "Chinese":"jong when",
     "Do you have any questions?":"knee yo when tea ma",
     "Fun":"how wahn",
-    "test":"test",
     "Hello":"knee how",
     "Hello, how are you?":"knee how mah",
     "I am ___":"wah shi",
@@ -42,6 +29,16 @@ def get_word_dict():
 
     word_dict = dict(sorted(unsorted_word_dict.items()))
     return word_dict
+
+def main():
+    top_html = get_top_html()
+    bottom_html = get_bottom_html()
+    word_dict = get_word_dict()
+    middle_html = get_middle_html(word_dict)
+    the_html = "".join([top_html, middle_html, bottom_html])
+    print(the_html)
+    with open("index.html", "w") as file:
+        file.write(the_html)
 
 def get_middle_html(word_dict):
     middle_html = ""
