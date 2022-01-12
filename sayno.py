@@ -8,7 +8,7 @@ def get_word_dict():
     "Hello":"knee how",
     "Hello, how are you?":"knee how mah",
     "I am ___":"wah shi",
-    "Is it fun?":"how wahn mah",
+    "Is it very fun?":"how wahn mah",
     "Goodbye":"zai jian",
     "Knee":"xee guy",
     "Left side":"zuo bian",
