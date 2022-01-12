@@ -17,6 +17,7 @@ def get_word_dict():
     "Chinese":"jong when",
     "Do you have any questions?":"knee yo when tea ma",
     "Fun":"how wahn",
+    "test":"test",
     "Hello":"knee how",
     "Hello, how are you?":"knee how mah",
     "I am ___":"wah shi",
