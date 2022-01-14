@@ -2,6 +2,7 @@ def get_word_dict():
     unsorted_word_dict = {
     "Awesome (strong skill)":"lee high",
     "Awesome! (666)":'<a href="https://content-prod.drops-files.com/v33/sound/mp3/303a400de01d6209f452b29b2628e1a1d85c63d5.mp3">leo leo leo</a>',
+    "Bad ass":"new bee",
     "Chinese":"jong when",
     "Do you have any questions?":"knee yo when tea mah",
     "Do you speak Chinese?":"knee way sho jong when mah",
