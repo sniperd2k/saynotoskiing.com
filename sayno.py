@@ -26,7 +26,8 @@ def get_word_dict():
     "What is your name?":"knee jeeow shehn mah",
     "You":"knee",
     "You're welcome":"buh kuh chee",
-    "Very good":"hen how",                                
+    "Very good":"hen how",     
+    "Tired":"late let",
     }
 
     word_dict = dict(sorted(unsorted_word_dict.items()))
