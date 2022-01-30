@@ -98,6 +98,15 @@ def get_top_html():
                     border-spacing: 0;
                 }
             </style>
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q2436XH6X2"></script>
+            <script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-Q2436XH6X2');
+            </script>
     </head>
     <body>
         <table class="welcometo1985">    
