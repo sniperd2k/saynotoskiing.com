@@ -28,7 +28,7 @@ def get_word_dict():
     "Thank you":"sieh sieh",
     "What is your name?":"knee jeeow shehn mah",
     "You":"knee",
-    "You're welcome":'<a href="https://www.youtube.com/watch?v=k9ksBmLSRkU">buh kuh chee</a>,
+    "You're welcome":'<a href="https://www.youtube.com/watch?v=k9ksBmLSRkU">buh kuh chee</a>',
     "Very good":"hen how",     
     "Tired":"late let",
     }
