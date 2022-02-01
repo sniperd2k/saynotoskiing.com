@@ -63,9 +63,13 @@ def get_bottom_html():
     bottom_html = """
         </table>
     <hr/>
+     <div class="gocenter">
         <img src="qr_code.png" alt="saynotoskiing" style="max-width:100%;height:auto;">
+    </div>
     <hr/>
-    <b>PPC</b>
+    <div class="goright">
+        <b>PPC</b>
+    </div>
     </body>
 </html>"""
     return bottom_html
@@ -96,6 +100,12 @@ def get_top_html():
                 .welcometo1985 {
                     width: 100%;
                     border-spacing: 0;
+                }
+                div.goright {
+                    text-align: right;
+                }
+                div.gocenter {
+                    text-align: center;
                 }
             </style>
             <!-- Global site tag (gtag.js) - Google Analytics -->
