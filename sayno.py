@@ -22,7 +22,7 @@ def get_word_dict():
     "Right side":"yo bien",
     "Ski":"hwah sooyeh",
     "Slowly":"man manda",
-    "Snow":'http://saynotoskiing.com/sounds/snow.mp3">sue eh</a>',
+    "Snow":'<a href="http://saynotoskiing.com/sounds/snow.mp3">sue eh</a>',
     "Snowboard":"dahn bahn",
     "Sorry":"dwi buh chee",
     "Thank you":"sieh sieh",
