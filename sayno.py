@@ -60,7 +60,7 @@ def get_middle_html(word_dict):
             <tr>
                 <td class="english"><span>''', english, '''</span></td>
                 <td class="phonetic">
-                    <span class="leftPad">''', phonetic, ''' <img src="images/play.jpeg" class="play" />
+                    <span class="leftPad">''', phonetic, '''
                     <audio id="''', file_name, '''" src="./sounds/''', file_name, '''" controls/>
                     </span>
                 </td>
