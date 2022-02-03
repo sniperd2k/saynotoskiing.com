@@ -38,18 +38,7 @@ def get_word_dict():
 
     word_dict = dict(sorted(unsorted_word_dict.items()))
     return word_dict
-    
-def get_word_dict_new():
-    unsorted_word_dict = {
-        "Awesome (strong skill)": "lee high",
-        "Awesome! (666)": "lel lel lel",
-        "Bad ass": "new bee",
-        "Chinese": "jong when",
-        "Correct": "du way",
-    }
-    word_dict = dict(sorted(unsorted_word_dict.items()))
-    return word_dict
-    
+        
 def get_middle_html(word_dict):
     middle_html = ""
     for english, phonetic in word_dict.items():
