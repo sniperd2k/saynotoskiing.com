@@ -1,7 +1,7 @@
 def get_word_dict():
     unsorted_word_dict = {
     "Awesome (strong skill)":"lee high",
-    "Awesome! (666)":'<a href="https://content-prod.drops-files.com/v33/sound/mp3/303a400de01d6209f452b29b2628e1a1d85c63d5.mp3">lel lel lel</a>',
+    "Awesome! (666)":'<a href="http://saynotoskiing.com/sounds/six.mp3">lel lel lel</a>',
     "Bad ass":"new bee",
     "Chinese":"jong when",
     "Correct":'<a href="http://saynotoskiing.com/sounds/correct.mp3">du way</a>',
