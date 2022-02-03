@@ -1,40 +1,80 @@
+import os
+import re
+
 def get_word_dict():
     unsorted_word_dict = {
     "Awesome (strong skill)":"lee high",
-    "Awesome! (666)":'<a href="http://saynotoskiing.com/sounds/six.mp3">lel lel lel</a>',
+    "Awesome! (666)":"lel lel lel",
     "Bad ass":"new bee",
     "Chinese":"jong when",
-    "Correct":'<a href="http://saynotoskiing.com/sounds/correct.mp3">du way</a>',
+    "Correct":"du way",
     "Do you have any questions?":"knee yo when tea mah",
     "Do you speak Chinese?":"knee way sho jong when mah",
     "Fun":"how wahn",
     "Hello":"knee how",
-    "How are you?":'<a href="http://saynotoskiing.com/sounds/how_are_you.mp3">knee how mah</a>',
+    "How are you?":"knee how mah",
     "I am ___":"wah shi",
     "Is it very fun?":"how wahn mah",
     "Goodbye":"zai jian",
     "Knee":"xee guy",
     "Left side":"zuo bian",
     "Look":"kahn",
-    "Me":'<a href="http://saynotoskiing.com/sounds/me.mp3">wha</a>',
+    "Me":"wha",
     "Not good":"bu how",
     "Patience":"neigh xeen",
     "Right side":"yo bien",
     "Ski":"hwah sooyeh",
     "Slowly":"man manda",
-    "Snow":'<a href="http://saynotoskiing.com/sounds/snow.mp3">sue eh</a>',
+    "Snow":"sue eh",
     "Snowboard":"dahn bahn",
     "Sorry":"dwi buh chee",
     "Thank you":"sieh sieh",
     "What is your name?":"knee jeeow shehn mah",
     "You":"knee",
-    "You're welcome":'<a href="http://saynotoskiing.com/sounds/you_are_welcome.mp3">buh kuh chee</a>',
+    "You're welcome":"buh kuh chee",
     "Very good":"hen how",     
     "Tired":"late let",
     }
 
     word_dict = dict(sorted(unsorted_word_dict.items()))
     return word_dict
+    
+def get_word_dict_new():
+    unsorted_word_dict = {
+        "Awesome (strong skill)": "lee high",
+        "Awesome! (666)": "lel lel lel",
+        "Bad ass": "new bee",
+        "Chinese": "jong when",
+        "Correct": "du way",
+    }
+    word_dict = dict(sorted(unsorted_word_dict.items()))
+    return word_dict
+    
+def get_middle_html(word_dict):
+    middle_html = ""
+    for english, phonetic in word_dict.items():
+        file_name = "".join([re.sub("[^A-Za-z0-9]", "", english), ".mp3"]).lower()
+        if os.path.isfile("".join(["sounds/", file_name])):
+            middle_html = "".join([middle_html, 
+            '''
+            <tr>
+                <td class="english"><span>''', english, '''</span></td>
+                <td class="phonetic" onclick="play(\'''', file_name, '''\')">
+                    <span class="leftPad">''', phonetic, ''' <img src="images/play.jpeg" class="play" />
+                    <audio id="''', file_name, '''" src="./sounds/''', file_name, '''" />
+                    </span>
+                </td>
+            </tr>
+            '''])
+        else:
+            middle_html = "".join([middle_html, 
+            '''
+            <tr>
+                <td class="english"><span>''', english, '''</span></td>
+                <td class="phonetic"><span class="leftPad">''', phonetic, '''</span></td>
+                </tr>
+            '''])
+    return middle_html
 
 def main():
     top_html = get_top_html()
@@ -46,25 +86,12 @@ def main():
     with open("index.html", "w") as file:
         file.write(the_html)
 
-def get_middle_html(word_dict):
-    middle_html = ""
-    for english, phonetic in word_dict.items():
-        middle_html = "".join([middle_html, 
-        '''
-        <tr>
-            <td class="english"><span style="font-size:3vw">''', english, '''</span></td>
-            <td class="phonetic"><span style="font-size:3vw; margin-left: 16px;">''', phonetic, '''</span></td>
-        </tr>
-        '''])
-    return middle_html        
-        
-
 def get_bottom_html():
     bottom_html = """
         </table>
     <hr/>
      <div class="gocenter">
-        <img src="qr_code.png" alt="saynotoskiing" style="max-width:100%;height:auto;">
+        <img src="images/qr_code.png" alt="saynotoskiing" style="max-width:100%;height:auto;">
     </div>
     <hr/>
     <div class="goright">
@@ -86,11 +113,11 @@ def get_top_html():
                 }
 
                 .english {
-
+                    font-size:3vw;
                 }
 
                 .phonetic {
-
+                    font-size:3vw;
                 }
 
                 tr:nth-child(even) {
@@ -107,6 +134,16 @@ def get_top_html():
                 div.gocenter {
                     text-align: center;
                 }
+				.play {
+					vertical-align: middle;
+					margin-bottom: 8px;
+					width: 44px;
+					height: 44px;
+				}
+				
+				.leftPad {
+					margin-left: 16px;
+				}
             </style>
             <!-- Global site tag (gtag.js) - Google Analytics -->
             <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q2436XH6X2"></script>
@@ -116,6 +153,12 @@ def get_top_html():
               gtag('js', new Date());
 
               gtag('config', 'G-Q2436XH6X2');
+            </script>
+            <script>
+              function play(audioId) {
+                var audio = document.getElementById(audioId);
+                audio.play();
+              }
             </script>
     </head>
     <body>
