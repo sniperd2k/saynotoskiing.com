@@ -53,7 +53,7 @@ def get_word_dict_new():
 def get_middle_html(word_dict):
     middle_html = ""
     for english, phonetic in word_dict.items():
-        file_name = "".join([re.sub("[^A-Za-z0-9]", "", english), ".mp3"])
+        file_name = "".join([re.sub("[^A-Za-z0-9]", "", english), ".mp3"]).lower()
         if os.path.isfile("".join(["sounds/", file_name])):
             middle_html = "".join([middle_html, 
             '''
