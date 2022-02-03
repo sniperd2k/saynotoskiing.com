@@ -1,37 +1,37 @@
 import os
 import re
 
-def get_word_dict_old():
+def get_word_dict():
     unsorted_word_dict = {
     "Awesome (strong skill)":"lee high",
-    "Awesome! (666)":'<audio id="" src="http://saynotoskiing.com/sounds/six.mp3" />lel lel lel</a>',
+    "Awesome! (666)":"lel lel lel",
     "Bad ass":"new bee",
     "Chinese":"jong when",
-    "Correct":'<audio id="" src="http://saynotoskiing.com/sounds/correct.mp3" />du way</a>',
+    "Correct":"du way",
     "Do you have any questions?":"knee yo when tea mah",
     "Do you speak Chinese?":"knee way sho jong when mah",
     "Fun":"how wahn",
     "Hello":"knee how",
-    "How are you?":'knee how mah <button class="testButton1"><img src="images/qr_code.png" alt="">Car</button> <input type="button" value="knee how mah" onclick="play()"><audio id="audio" src="http://saynotoskiing.com/sounds/how_are_you.mp3" /></audio>',
+    "How are you?":"knee how mah",
     "I am ___":"wah shi",
     "Is it very fun?":"how wahn mah",
     "Goodbye":"zai jian",
     "Knee":"xee guy",
     "Left side":"zuo bian",
     "Look":"kahn",
-    "Me":'<audio id="" src="http://saynotoskiing.com/sounds/me.mp3" />wha</a>',
+    "Me":"wha",
     "Not good":"bu how",
     "Patience":"neigh xeen",
     "Right side":"yo bien",
     "Ski":"hwah sooyeh",
     "Slowly":"man manda",
-    "Snow":'<audio id="" src="http://saynotoskiing.com/sounds/snow.mp3" />sue eh</a>',
+    "Snow":"sue eh",
     "Snowboard":"dahn bahn",
     "Sorry":"dwi buh chee",
     "Thank you":"sieh sieh",
     "What is your name?":"knee jeeow shehn mah",
     "You":"knee",
-    "You're welcome":'<audio id="" src="http://saynotoskiing.com/sounds/you_are_welcome.mp3" />buh kuh chee</a>',
+    "You're welcome":"buh kuh chee",
     "Very good":"hen how",     
     "Tired":"late let",
     }
@@ -39,7 +39,7 @@ def get_word_dict_old():
     word_dict = dict(sorted(unsorted_word_dict.items()))
     return word_dict
     
-def get_word_dict():
+def get_word_dict_new():
     unsorted_word_dict = {
         "Awesome (strong skill)": "lee high",
         "Awesome! (666)": "lel lel lel",
@@ -53,15 +53,15 @@ def get_word_dict():
 def get_middle_html(word_dict):
     middle_html = ""
     for english, phonetic in word_dict.items():
-        file_name = "".join([re.sub(" ", "_", english).lower(), ".mp3"])
+        file_name = "".join([re.sub("[^A-Za-z0-9]", "", english), ".mp3"])
         if os.path.isfile("".join(["sounds/", file_name])):
             middle_html = "".join([middle_html, 
             '''
             <tr>
                 <td class="english"><span>''', english, '''</span></td>
-                <td class="phonetic" onclick="play(\'''', english,'''\')">
+                <td class="phonetic" onclick="play(\'''', english, '''\')">
                     <span class="leftPad">''', phonetic, ''' <img src="images/play.jpeg" class="play" />
-                    <audio id="''', english,'''" src="http://saynotoskiing.com/sounds/''', file_name,'''" />
+                    <audio id="''', english, '''" src="http://saynotoskiing.com/sounds/''', file_name, '''" />
                     </span>
                 </td>
             </tr>
@@ -74,7 +74,6 @@ def get_middle_html(word_dict):
                 <td class="phonetic"><span class="leftPad">''', phonetic, '''</span></td>
                 </tr>
             '''])
-            
     return middle_html
 
 def main():
