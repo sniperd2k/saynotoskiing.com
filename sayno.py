@@ -9,7 +9,7 @@ def get_word_dict():
     "Do you speak Chinese?":"knee way sho jong when mah",
     "Fun":"how wahn",
     "Hello":"knee how",
-    "How are you?":'<a href="http://saynotoskiing.com/sounds/how_are_you.mp3">knee how mah</a>',
+    "How are you?":'<input type="button" value="knee how mah" onclick="play()"><audio id="audio" src="http://saynotoskiing.com/sounds/how_are_you.mp3"></audio>',
     "I am ___":"wah shi",
     "Is it very fun?":"how wahn mah",
     "Goodbye":"zai jian",
@@ -119,6 +119,12 @@ def get_top_html():
             </script>
     </head>
     <body>
+    <script>
+      function play() {
+        var audio = document.getElementById("audio");
+        audio.play();
+      }
+    </script>
         <table class="welcometo1985">    
     """
     return top_html
