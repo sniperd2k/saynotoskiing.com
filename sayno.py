@@ -49,7 +49,7 @@ def get_better_middle_html(word_dict):
         mp3 = values[1]
         audioId = values[2]
         
-        if mp3 == "" and audioId == "":
+        if mp3 == "" or audioId == "":
             middle_html = "".join([middle_html, 
             '''
             <tr>
