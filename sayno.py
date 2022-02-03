@@ -1,4 +1,7 @@
-def get_word_dict():
+import os
+import re
+
+def get_word_dict_old():
     unsorted_word_dict = {
     "Awesome (strong skill)":"lee high",
     "Awesome! (666)":'<audio id="" src="http://saynotoskiing.com/sounds/six.mp3" />lel lel lel</a>',
@@ -36,20 +39,34 @@ def get_word_dict():
     word_dict = dict(sorted(unsorted_word_dict.items()))
     return word_dict
     
-def get_better_word_dict():
+def get_word_dict():
     unsorted_word_dict = {
-        "Awesome (strong skill)": ["lee high", "", ""],
-        "Awesome! (666)": ["lel lel lel", "six.mp3", "uniqueId"]
+        "Awesome (strong skill)": "lee high",
+        "Awesome! (666)": "lel lel lel",
+        "Bad ass": "new bee",
+        "Chinese": "jong when",
+        "Correct": "du way",
     }
+    word_dict = dict(sorted(unsorted_word_dict.items()))
+    return word_dict
     
-def get_better_middle_html(word_dict):
+def get_middle_html(word_dict):
     middle_html = ""
-    for english, values in word_dict.items():
-        phonetic = values[0]
-        mp3 = values[1]
-        audioId = values[2]
-        
-        if mp3 == "" or audioId == "":
+    for english, phonetic in word_dict.items():
+        file_name = "".join([re.sub(" ", "_", english).lower(), ".mp3"])
+        if os.path.isfile("".join(["sounds/", file_name])):
+            middle_html = "".join([middle_html, 
+            '''
+            <tr>
+                <td class="english"><span>''', english, '''</span></td>
+                <td class="phonetic" onclick="play(\'''', english,'''\')">
+                    <span class="leftPad">''', phonetic, ''' <img src="images/play.jpeg" class="play" />
+                    <audio id="''', english,'''" src="http://saynotoskiing.com/sounds/''', file_name,'''" />
+                    </span>
+                </td>
+            </tr>
+            '''])
+        else:
             middle_html = "".join([middle_html, 
             '''
             <tr>
@@ -57,18 +74,7 @@ def get_better_middle_html(word_dict):
                 <td class="phonetic"><span class="leftPad">''', phonetic, '''</span></td>
                 </tr>
             '''])
-        else:
-            middle_html = "".join([middle_html, 
-            '''
-            <tr>
-                <td class="english"><span>''', english, '''</span></td>
-                <td class="phonetic" onclick="play(\'''',audioId,'''\')">
-                    <span class="leftPad">''', phonetic, ''' <img src="images/play.jpeg" class="play" />
-                    <audio id="''',audioId,'''" src="http://saynotoskiing.com/sounds/''',mp3,'''" />
-                    </span>
-                </td>
-            </tr>
-            '''])
+            
     return middle_html
 
 def main():
@@ -80,19 +86,6 @@ def main():
     print(the_html)
     with open("index.html", "w") as file:
         file.write(the_html)
-
-def get_middle_html(word_dict):
-    middle_html = ""
-    for english, phonetic in word_dict.items():
-        middle_html = "".join([middle_html, 
-        '''
-        <tr>
-            <td class="english"><span>''', english, '''</span></td>
-            <td class="phonetic"><span class="leftPad">''', phonetic, '''</span></td>
-        </tr>
-        '''])
-    return middle_html        
-        
 
 def get_bottom_html():
     bottom_html = """
