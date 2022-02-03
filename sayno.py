@@ -9,7 +9,7 @@ def get_word_dict():
     "Do you speak Chinese?":"knee way sho jong when mah",
     "Fun":"how wahn",
     "Hello":"knee how",
-    "How are you?":'<input type="button" value="knee how mah" onclick="play()"><audio id="audio" src="http://saynotoskiing.com/sounds/how_are_you.mp3"></audio>',
+    "How are you?":'knee how mah <input type="button" value="knee how mah" onclick="play()"><audio id="audio" src="http://saynotoskiing.com/sounds/how_are_you.mp3"></audio>',
     "I am ___":"wah shi",
     "Is it very fun?":"how wahn mah",
     "Goodbye":"zai jian",
@@ -64,7 +64,7 @@ def get_bottom_html():
         </table>
     <hr/>
      <div class="gocenter">
-        <img src="qr_code.png" alt="saynotoskiing" style="max-width:100%;height:auto;">
+        <img src="images/qr_code.png" alt="saynotoskiing" style="max-width:100%;height:auto;">
     </div>
     <hr/>
     <div class="goright">
