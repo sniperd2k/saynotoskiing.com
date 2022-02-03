@@ -9,11 +9,11 @@
                 }
 
                 .english {
-
+					font-size:3vw;
                 }
 
                 .phonetic {
-
+					font-size:3vw; 
                 }
 
                 tr:nth-child(even) {
@@ -30,6 +30,18 @@
                 div.gocenter {
                     text-align: center;
                 }
+				
+				.play {
+					vertical-align: middle;
+					margin-bottom: 8px;
+					width: 44px;
+					height: 44px;
+				}
+				
+				.leftPad {
+					margin-left: 16px;
+				}
+							
             </style>
             <!-- Global site tag (gtag.js) - Google Analytics -->
             <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q2436XH6X2"></script>
@@ -41,8 +53,8 @@
               gtag('config', 'G-Q2436XH6X2');
             </script>
             <script>
-              function play() {
-                var audio = document.getElementById("audio");
+              function play(audioId) {
+                var audio = document.getElementById(audioId);
                 audio.play();
               }
             </script>
@@ -51,158 +63,185 @@
         <table class="welcometo1985">    
     
         <tr>
-            <td class="english"><span style="font-size:3vw">Awesome (strong skill)</span></td>
-            <td class="phonetic"><span style="font-size:3vw; margin-left: 16px;">lee high</span></td>
+            <td class="english"><span>Awesome (strong skill)</span></td>
+            <td class="phonetic"><span class="leftPad">lee high</span></td>
         </tr>
         
         <tr>
-            <td class="english"><span style="font-size:3vw">Awesome! (666)</span></td>
-            <td class="phonetic"><span style="font-size:3vw; margin-left: 16px;"><a href="http://saynotoskiing.com/sounds/six.mp3">lel lel lel</a></span></td>
+            <td class="english"><span>Awesome! (666)</span></td>
+            <td class="phonetic" onclick="play('lellellel')">
+				<span class="leftPad">
+					lel lel lel <img src="images/play.jpeg" class="play" />
+					<audio id="lellellel" src="http://saynotoskiing.com/sounds/six.mp3" />
+				</span>
+			</td>
         </tr>
         
         <tr>
-            <td class="english"><span style="font-size:3vw">Bad ass</span></td>
-            <td class="phonetic"><span style="font-size:3vw; margin-left: 16px;">new bee</span></td>
+            <td class="english"><span>Bad ass</span></td>
+            <td class="phonetic"><span class="leftPad">new bee</span></td>
         </tr>
         
         <tr>
-            <td class="english"><span style="font-size:3vw">Chinese</span></td>
-            <td class="phonetic"><span style="font-size:3vw; margin-left: 16px;">jong when</span></td>
+            <td class="english"><span>Chinese</span></td>
+            <td class="phonetic"><span class="leftPad">jong when</span></td>
         </tr>
         
         <tr>
-            <td class="english"><span style="font-size:3vw">Correct</span></td>
-            <td class="phonetic"><span style="font-size:3vw; margin-left: 16px;"><a href="http://saynotoskiing.com/sounds/correct.mp3">du way</a></span></td>
+            <td class="english"><span>Correct</span></td>
+            <td class="phonetic" onclick="play('duway')"><span class="leftPad">
+				du way<img src="images/play.jpeg" class="play" />
+				<audio id="duway" src="http://saynotoskiing.com/sounds/correct.mp3" />
+			</span>
+		</td>
         </tr>
         
         <tr>
-            <td class="english"><span style="font-size:3vw">Do you have any questions?</span></td>
-            <td class="phonetic"><span style="font-size:3vw; margin-left: 16px;">knee yo when tea mah</span></td>
+            <td class="english"><span>Do you have any questions?</span></td>
+            <td class="phonetic"><span class="leftPad">knee yo when tea mah</span></td>
         </tr>
         
         <tr>
-            <td class="english"><span style="font-size:3vw">Do you speak Chinese?</span></td>
-            <td class="phonetic"><span style="font-size:3vw; margin-left: 16px;">knee way sho jong when mah</span></td>
+            <td class="english"><span>Do you speak Chinese?</span></td>
+            <td class="phonetic"><span class="leftPad">knee way sho jong when mah</span></td>
         </tr>
         
         <tr>
-            <td class="english"><span style="font-size:3vw">Fun</span></td>
-            <td class="phonetic"><span style="font-size:3vw; margin-left: 16px;">how wahn</span></td>
+            <td class="english"><span>Fun</span></td>
+            <td class="phonetic"><span class="leftPad">how wahn</span></td>
         </tr>
         
         <tr>
-            <td class="english"><span style="font-size:3vw">Goodbye</span></td>
-            <td class="phonetic"><span style="font-size:3vw; margin-left: 16px;">zai jian</span></td>
+            <td class="english"><span>Goodbye</span></td>
+            <td class="phonetic"><span class="leftPad">zai jian</span></td>
         </tr>
         
         <tr>
-            <td class="english"><span style="font-size:3vw">Hello</span></td>
-            <td class="phonetic"><span style="font-size:3vw; margin-left: 16px;">knee how</span></td>
+            <td class="english"><span>Hello</span></td>
+            <td class="phonetic"><span class="leftPad">knee how</span></td>
+        </tr>
+        
+        <tr valign="middle">
+            <td class="english"><span>How are you?</span></td>
+            <td class="phonetic" onclick="play('kneehowmah')">
+				<span class="leftPad">
+					knee how mah <img src="images/play.jpeg" class="play" />
+					<audio id="kneehowmah" src="http://saynotoskiing.com/sounds/how_are_you.mp3" /></audio>
+				</span>
+			</td>
         </tr>
         
         <tr>
-            <td class="english"><span style="font-size:3vw">How are you?</span></td>
-            <td class="phonetic"><span style="font-size:3vw; margin-left: 16px;">knee how mah <input type="button" value="knee how mah" onclick="play()"><audio id="audio" src="http://saynotoskiing.com/sounds/how_are_you.mp3"></audio></span></td>
+            <td class="english"><span>I am ___</span></td>
+            <td class="phonetic"><span class="leftPad">wah shi</span></td>
         </tr>
         
         <tr>
-            <td class="english"><span style="font-size:3vw">I am ___</span></td>
-            <td class="phonetic"><span style="font-size:3vw; margin-left: 16px;">wah shi</span></td>
+            <td class="english"><span>Is it very fun?</span></td>
+            <td class="phonetic"><span class="leftPad">how wahn mah</span></td>
         </tr>
         
         <tr>
-            <td class="english"><span style="font-size:3vw">Is it very fun?</span></td>
-            <td class="phonetic"><span style="font-size:3vw; margin-left: 16px;">how wahn mah</span></td>
+            <td class="english"><span>Knee</span></td>
+            <td class="phonetic"><span class="leftPad">xee guy</span></td>
         </tr>
         
         <tr>
-            <td class="english"><span style="font-size:3vw">Knee</span></td>
-            <td class="phonetic"><span style="font-size:3vw; margin-left: 16px;">xee guy</span></td>
+            <td class="english"><span>Left side</span></td>
+            <td class="phonetic"><span class="leftPad">zuo bian</span></td>
         </tr>
         
         <tr>
-            <td class="english"><span style="font-size:3vw">Left side</span></td>
-            <td class="phonetic"><span style="font-size:3vw; margin-left: 16px;">zuo bian</span></td>
+            <td class="english"><span>Look</span></td>
+            <td class="phonetic"><span class="leftPad">kahn</span></td>
         </tr>
         
         <tr>
-            <td class="english"><span style="font-size:3vw">Look</span></td>
-            <td class="phonetic"><span style="font-size:3vw; margin-left: 16px;">kahn</span></td>
+            <td class="english"><span>Me</span></td>
+            <td class="phonetic" onclick="play('wha')">
+				<span class="leftPad">wha <img src="images/play.jpeg" class="play" />
+					<audio id="wha" src="http://saynotoskiing.com/sounds/me.mp3" />
+					</span>
+				</td>
         </tr>
         
         <tr>
-            <td class="english"><span style="font-size:3vw">Me</span></td>
-            <td class="phonetic"><span style="font-size:3vw; margin-left: 16px;"><a href="http://saynotoskiing.com/sounds/me.mp3">wha</a></span></td>
+            <td class="english"><span>Not good</span></td>
+            <td class="phonetic"><span class="leftPad">bu how</span></td>
         </tr>
         
         <tr>
-            <td class="english"><span style="font-size:3vw">Not good</span></td>
-            <td class="phonetic"><span style="font-size:3vw; margin-left: 16px;">bu how</span></td>
+            <td class="english"><span>Patience</span></td>
+            <td class="phonetic"><span class="leftPad">neigh xeen</span></td>
         </tr>
         
         <tr>
-            <td class="english"><span style="font-size:3vw">Patience</span></td>
-            <td class="phonetic"><span style="font-size:3vw; margin-left: 16px;">neigh xeen</span></td>
+            <td class="english"><span>Right side</span></td>
+            <td class="phonetic"><span class="leftPad">yo bien</span></td>
         </tr>
         
         <tr>
-            <td class="english"><span style="font-size:3vw">Right side</span></td>
-            <td class="phonetic"><span style="font-size:3vw; margin-left: 16px;">yo bien</span></td>
+            <td class="english"><span>Ski</span></td>
+            <td class="phonetic"><span class="leftPad">hwah sooyeh</span></td>
         </tr>
         
         <tr>
-            <td class="english"><span style="font-size:3vw">Ski</span></td>
-            <td class="phonetic"><span style="font-size:3vw; margin-left: 16px;">hwah sooyeh</span></td>
+            <td class="english"><span>Slowly</span></td>
+            <td class="phonetic"><span class="leftPad">man manda</span></td>
         </tr>
         
         <tr>
-            <td class="english"><span style="font-size:3vw">Slowly</span></td>
-            <td class="phonetic"><span style="font-size:3vw; margin-left: 16px;">man manda</span></td>
+            <td class="english"><span>Snow</span></td>
+            <td class="phonetic" onclick="play('sueeh')">
+				<span class="leftPad">sue eh<img src="images/play.jpeg" class="play" />
+					<audio id="sueeh" src="http://saynotoskiing.com/sounds/snow.mp3" />
+				</span>
+			</td>
         </tr>
         
         <tr>
-            <td class="english"><span style="font-size:3vw">Snow</span></td>
-            <td class="phonetic"><span style="font-size:3vw; margin-left: 16px;"><a href="http://saynotoskiing.com/sounds/snow.mp3">sue eh</a></span></td>
+            <td class="english"><span>Snowboard</span></td>
+            <td class="phonetic"><span class="leftPad">dahn bahn</span></td>
         </tr>
         
         <tr>
-            <td class="english"><span style="font-size:3vw">Snowboard</span></td>
-            <td class="phonetic"><span style="font-size:3vw; margin-left: 16px;">dahn bahn</span></td>
+            <td class="english"><span>Sorry</span></td>
+            <td class="phonetic"><span class="leftPad">dwi buh chee</span></td>
         </tr>
         
         <tr>
-            <td class="english"><span style="font-size:3vw">Sorry</span></td>
-            <td class="phonetic"><span style="font-size:3vw; margin-left: 16px;">dwi buh chee</span></td>
+            <td class="english"><span>Thank you</span></td>
+            <td class="phonetic"><span class="leftPad">sieh sieh</span></td>
         </tr>
         
         <tr>
-            <td class="english"><span style="font-size:3vw">Thank you</span></td>
-            <td class="phonetic"><span style="font-size:3vw; margin-left: 16px;">sieh sieh</span></td>
+            <td class="english"><span>Tired</span></td>
+            <td class="phonetic"><span class="leftPad">late let</span></td>
         </tr>
         
         <tr>
-            <td class="english"><span style="font-size:3vw">Tired</span></td>
-            <td class="phonetic"><span style="font-size:3vw; margin-left: 16px;">late let</span></td>
+            <td class="english"><span>Very good</span></td>
+            <td class="phonetic"><span class="leftPad">hen how</span></td>
         </tr>
         
         <tr>
-            <td class="english"><span style="font-size:3vw">Very good</span></td>
-            <td class="phonetic"><span style="font-size:3vw; margin-left: 16px;">hen how</span></td>
+            <td class="english"><span>What is your name?</span></td>
+            <td class="phonetic"><span class="leftPad">knee jeeow shehn mah</span></td>
         </tr>
         
         <tr>
-            <td class="english"><span style="font-size:3vw">What is your name?</span></td>
-            <td class="phonetic"><span style="font-size:3vw; margin-left: 16px;">knee jeeow shehn mah</span></td>
+            <td class="english"><span>You</span></td>
+            <td class="phonetic"><span class="leftPad">knee</span></td>
         </tr>
         
         <tr>
-            <td class="english"><span style="font-size:3vw">You</span></td>
-            <td class="phonetic"><span style="font-size:3vw; margin-left: 16px;">knee</span></td>
-        </tr>
-        
-        <tr>
-            <td class="english"><span style="font-size:3vw">You're welcome</span></td>
-            <td class="phonetic"><span style="font-size:3vw; margin-left: 16px;"><a href="http://saynotoskiing.com/sounds/you_are_welcome.mp3">buh kuh chee</a></span></td>
+            <td class="english"><span>You're welcome</span></td>
+            <td class="phonetic" onclick="play('huhkuhchee')">
+				<span class="leftPad">buh kuh chee
+					<img src="images/play.jpeg" class="play" />
+					<audio id="huhkuhchee" src="http://saynotoskiing.com/sounds/you_are_welcome.mp3" />
+				</span>
+			</td>
         </tr>
         
         </table>
