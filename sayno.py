@@ -117,14 +117,14 @@ def get_top_html():
 
               gtag('config', 'G-Q2436XH6X2');
             </script>
+            <script>
+              function play() {
+                var audio = document.getElementById("audio");
+                audio.play();
+              }
+            </script>
     </head>
     <body>
-    <script>
-      function play() {
-        var audio = document.getElementById("audio");
-        audio.play();
-      }
-    </script>
         <table class="welcometo1985">    
     """
     return top_html
