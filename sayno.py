@@ -61,7 +61,7 @@ def get_middle_html(word_dict):
                 <td class="english"><span>''', english, '''</span></td>
                 <td class="phonetic" onclick="play(\'''', english, '''\')">
                     <span class="leftPad">''', phonetic, ''' <img src="images/play.jpeg" class="play" />
-                    <audio id="''', file_name, '''" src="./sounds/''', file_name, '''" />
+                    <audio id="''', re.sub("\.", "", file_name), '''" src="./sounds/''', file_name, '''" />
                     </span>
                 </td>
             </tr>
