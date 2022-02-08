@@ -14,7 +14,7 @@ def get_word_dict():
     "Hello":"knee how",
     "Help":"baong",
     "How are you?":"knee how mah",
-    "I am ___":"wah shi",
+    "I am called ___":"wah jiao",
     "Is it very fun?":"how wahn mah",
     "Goodbye":"zai jian",
     "Knee":"xee guy",
