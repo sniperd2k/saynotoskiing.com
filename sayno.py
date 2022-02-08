@@ -12,6 +12,7 @@ def get_word_dict():
     "Do you speak Chinese?":"knee way sho jong when mah",
     "Fun":"how wahn",
     "Hello":"knee how",
+    "Help":"Bong",
     "How are you?":"knee how mah",
     "I am ___":"wah shi",
     "Is it very fun?":"how wahn mah",
