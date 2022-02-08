@@ -29,7 +29,7 @@ def get_word_dict():
     "Snowboard":"dahn bahn",
     "Sorry":"dwi buh chee",
     "Thank you":"sieh sieh",
-    "What is your name?":"knee jeeow shehn mah",
+    "What is your name?":"knee jow shehn mah",
     "You":"knee",
     "You're welcome":"buh kuh chee",
     "Very good":"hen how",     
