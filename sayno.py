@@ -22,6 +22,7 @@ def get_word_dict():
     "Look":"kahn",
     "Me":"wha",
     "Not good":"bu how",
+    "Need/Want":"yao",
     "Patience":"neigh xeen",
     "Right side":"yo bien",
     "Ski":"hwah sooyeh",
