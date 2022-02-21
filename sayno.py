@@ -20,7 +20,7 @@ def get_word_dict():
     "Knee":"xee guy",
     "Left side":"zuo bian",
     "Look":"kahn",
-    "Me":"wha",
+    "Me/I":"wah",
     "Not good":"bu how",
     "Need/Want":"yao",
     "Patience":"neigh xeen",
