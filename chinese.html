@@ -1,0 +1,384 @@
+
+<html>
+    <head>
+        <title>PPC fun first</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <style>
+                * {
+                    box-sizing: border-box;
+                }
+
+                .english { font-size:3vw; } 
+                
+                .phonetic { font-size:3vw; } 
+                
+                tr:nth-child(even) { background-color: #f1f1f1; } 
+                
+                .welcometo1985 { width: 100%; border-spacing: 0; }
+                
+                div.goright { text-align: right; } 
+              
+                .play { vertical-align: middle; margin-bottom: 8px; width: 44px; height: 44px; }
+				
+				.leftPad { margin-left: 16px; }
+
+                .audio-player { display: inline-block; width: 1em; height: 1em; }
+
+                .controls { display: flex; flex-direction: row; align-items: center; width: 100%; }
+
+                .player-button { background-color: transparent; border: 0; cursor: pointer; padding: 0; width: 3em; height: 3em; }
+
+            </style>
+            <script> 
+                const playIcon = `
+                	          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#3D3132">
+                	      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                	    </svg>
+                	        `,
+                	        pauseIcon = `
+                	          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#3D3132">
+                	    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM7 8a1 1 0 012 0v4a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v4a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
+                	  </svg>
+                	        `;
+                function toggleAudio (audioId) {
+                    var audio = document.getElementById(audioId);
+        			var playerButton = document.getElementById(audioId+"button")
+                    if (audio.paused) {
+                        audio.play();
+                        playerButton.innerHTML = pauseIcon;
+                    } else {
+                        audio.pause();
+                        playerButton.innerHTML = playIcon;
+                    }
+                }
+                
+                function audioEnded (buttonId) {
+                    var playerButton = document.getElementById(buttonId)
+                    playerButton.innerHTML = playIcon;
+                } 
+            </script>
+    </head>
+    <body>
+        <table class="welcometo1985">    
+    
+            <tr>
+                <td class="english"><span>Awesome (strong skill)</span></td>
+                <td class="phonetic"><span class="leftPad">lee high</span></td>
+                </tr>
+            
+            <tr>
+                <td class="english"><span>Awesome! (666)</span></td>
+                <td class="phonetic" onclick="toggleAudio('awesome666.mp3')">
+                    <span class="leftPad">lel lel lel</span>
+                    <div class="audio-player">
+                        <div class="controls">
+                            <audio id="awesome666.mp3" src="./sounds/awesome666.mp3" onended="audioEnded('awesome666.mp3button')"></audio>
+                            <button id="awesome666.mp3button" class="player-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#3D3132">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="english"><span>Bad ass</span></td>
+                <td class="phonetic"><span class="leftPad">new bee</span></td>
+                </tr>
+            
+            <tr>
+                <td class="english"><span>Chinese</span></td>
+                <td class="phonetic"><span class="leftPad">jong when</span></td>
+                </tr>
+            
+            <tr>
+                <td class="english"><span>Correct</span></td>
+                <td class="phonetic" onclick="toggleAudio('correct.mp3')">
+                    <span class="leftPad">du way</span>
+                    <div class="audio-player">
+                        <div class="controls">
+                            <audio id="correct.mp3" src="./sounds/correct.mp3" onended="audioEnded('correct.mp3button')"></audio>
+                            <button id="correct.mp3button" class="player-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#3D3132">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="english"><span>Do you have any questions?</span></td>
+                <td class="phonetic" onclick="toggleAudio('doyouhaveanyquestions.mp3')">
+                    <span class="leftPad">knee yo when tea mah</span>
+                    <div class="audio-player">
+                        <div class="controls">
+                            <audio id="doyouhaveanyquestions.mp3" src="./sounds/doyouhaveanyquestions.mp3" onended="audioEnded('doyouhaveanyquestions.mp3button')"></audio>
+                            <button id="doyouhaveanyquestions.mp3button" class="player-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#3D3132">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="english"><span>Do you speak Chinese?</span></td>
+                <td class="phonetic"><span class="leftPad">knee way sho jong when mah</span></td>
+                </tr>
+            
+            <tr>
+                <td class="english"><span>Fun</span></td>
+                <td class="phonetic"><span class="leftPad">how wahn</span></td>
+                </tr>
+            
+            <tr>
+                <td class="english"><span>Goodbye</span></td>
+                <td class="phonetic"><span class="leftPad">zai jian</span></td>
+                </tr>
+            
+            <tr>
+                <td class="english"><span>Hello</span></td>
+                <td class="phonetic"><span class="leftPad">knee how</span></td>
+                </tr>
+            
+            <tr>
+                <td class="english"><span>Help</span></td>
+                <td class="phonetic" onclick="toggleAudio('help.mp3')">
+                    <span class="leftPad">baong mong</span>
+                    <div class="audio-player">
+                        <div class="controls">
+                            <audio id="help.mp3" src="./sounds/help.mp3" onended="audioEnded('help.mp3button')"></audio>
+                            <button id="help.mp3button" class="player-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#3D3132">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="english"><span>How are you?</span></td>
+                <td class="phonetic" onclick="toggleAudio('howareyou.mp3')">
+                    <span class="leftPad">knee how mah</span>
+                    <div class="audio-player">
+                        <div class="controls">
+                            <audio id="howareyou.mp3" src="./sounds/howareyou.mp3" onended="audioEnded('howareyou.mp3button')"></audio>
+                            <button id="howareyou.mp3button" class="player-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#3D3132">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="english"><span>I am called ___</span></td>
+                <td class="phonetic" onclick="toggleAudio('iamcalled.mp3')">
+                    <span class="leftPad">wah jiao</span>
+                    <div class="audio-player">
+                        <div class="controls">
+                            <audio id="iamcalled.mp3" src="./sounds/iamcalled.mp3" onended="audioEnded('iamcalled.mp3button')"></audio>
+                            <button id="iamcalled.mp3button" class="player-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#3D3132">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="english"><span>Is it very fun?</span></td>
+                <td class="phonetic"><span class="leftPad">how wahn mah</span></td>
+                </tr>
+            
+            <tr>
+                <td class="english"><span>Knee</span></td>
+                <td class="phonetic"><span class="leftPad">xee guy</span></td>
+                </tr>
+            
+            <tr>
+                <td class="english"><span>Left side</span></td>
+                <td class="phonetic"><span class="leftPad">zuo bian</span></td>
+                </tr>
+            
+            <tr>
+                <td class="english"><span>Look</span></td>
+                <td class="phonetic"><span class="leftPad">kahn</span></td>
+                </tr>
+            
+            <tr>
+                <td class="english"><span>Look up</span></td>
+                <td class="phonetic" onclick="toggleAudio('lookup.mp3')">
+                    <span class="leftPad">tai toe</span>
+                    <div class="audio-player">
+                        <div class="controls">
+                            <audio id="lookup.mp3" src="./sounds/lookup.mp3" onended="audioEnded('lookup.mp3button')"></audio>
+                            <button id="lookup.mp3button" class="player-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#3D3132">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="english"><span>Me/I</span></td>
+                <td class="phonetic"><span class="leftPad">wah</span></td>
+                </tr>
+            
+            <tr>
+                <td class="english"><span>Need/Want</span></td>
+                <td class="phonetic" onclick="toggleAudio('needwant.mp3')">
+                    <span class="leftPad">yao</span>
+                    <div class="audio-player">
+                        <div class="controls">
+                            <audio id="needwant.mp3" src="./sounds/needwant.mp3" onended="audioEnded('needwant.mp3button')"></audio>
+                            <button id="needwant.mp3button" class="player-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#3D3132">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="english"><span>Not good</span></td>
+                <td class="phonetic"><span class="leftPad">bu how</span></td>
+                </tr>
+            
+            <tr>
+                <td class="english"><span>Patience</span></td>
+                <td class="phonetic"><span class="leftPad">neigh xeen</span></td>
+                </tr>
+            
+            <tr>
+                <td class="english"><span>Right side</span></td>
+                <td class="phonetic"><span class="leftPad">yo bien</span></td>
+                </tr>
+            
+            <tr>
+                <td class="english"><span>Ski</span></td>
+                <td class="phonetic"><span class="leftPad">hwah sooyeh</span></td>
+                </tr>
+            
+            <tr>
+                <td class="english"><span>Slowly</span></td>
+                <td class="phonetic"><span class="leftPad">man manda</span></td>
+                </tr>
+            
+            <tr>
+                <td class="english"><span>Snow</span></td>
+                <td class="phonetic" onclick="toggleAudio('snow.mp3')">
+                    <span class="leftPad">sue eh</span>
+                    <div class="audio-player">
+                        <div class="controls">
+                            <audio id="snow.mp3" src="./sounds/snow.mp3" onended="audioEnded('snow.mp3button')"></audio>
+                            <button id="snow.mp3button" class="player-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#3D3132">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="english"><span>Snowboard</span></td>
+                <td class="phonetic"><span class="leftPad">dahn bahn</span></td>
+                </tr>
+            
+            <tr>
+                <td class="english"><span>Sorry</span></td>
+                <td class="phonetic" onclick="toggleAudio('sorry.mp3')">
+                    <span class="leftPad">dwi buh chee</span>
+                    <div class="audio-player">
+                        <div class="controls">
+                            <audio id="sorry.mp3" src="./sounds/sorry.mp3" onended="audioEnded('sorry.mp3button')"></audio>
+                            <button id="sorry.mp3button" class="player-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#3D3132">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="english"><span>Thank you</span></td>
+                <td class="phonetic"><span class="leftPad">sieh sieh</span></td>
+                </tr>
+            
+            <tr>
+                <td class="english"><span>Tired</span></td>
+                <td class="phonetic"><span class="leftPad">late let</span></td>
+                </tr>
+            
+            <tr>
+                <td class="english"><span>Very good</span></td>
+                <td class="phonetic"><span class="leftPad">hen how</span></td>
+                </tr>
+            
+            <tr>
+                <td class="english"><span>What is your name?</span></td>
+                <td class="phonetic" onclick="toggleAudio('whatisyourname.mp3')">
+                    <span class="leftPad">knee jow shehn mah</span>
+                    <div class="audio-player">
+                        <div class="controls">
+                            <audio id="whatisyourname.mp3" src="./sounds/whatisyourname.mp3" onended="audioEnded('whatisyourname.mp3button')"></audio>
+                            <button id="whatisyourname.mp3button" class="player-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#3D3132">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="english"><span>You</span></td>
+                <td class="phonetic"><span class="leftPad">knee</span></td>
+                </tr>
+            
+            <tr>
+                <td class="english"><span>You're welcome</span></td>
+                <td class="phonetic" onclick="toggleAudio('yourewelcome.mp3')">
+                    <span class="leftPad">buh kuh chee</span>
+                    <div class="audio-player">
+                        <div class="controls">
+                            <audio id="yourewelcome.mp3" src="./sounds/yourewelcome.mp3" onended="audioEnded('yourewelcome.mp3button')"></audio>
+                            <button id="yourewelcome.mp3button" class="player-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#3D3132">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            
+        </table>
+    <hr/>
+    <div class="goright">
+        <b>PPC</b>
+    </div>
+    </body>
+</html>
