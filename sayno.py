@@ -84,7 +84,7 @@ def main():
     middle_html = get_middle_html(word_dict)
     the_html = "".join([top_html, middle_html, bottom_html])
     print(the_html)
-    with open("index.html", "w") as file:
+    with open("chinese.html", "w") as file:
         file.write(the_html)
 
 def get_bottom_html():
@@ -136,15 +136,6 @@ def get_top_html():
                 .player-button { background-color: transparent; border: 0; cursor: pointer; padding: 0; width: 3em; height: 3em; }
 
             </style>
-            <!-- Global site tag (gtag.js) - Google Analytics -->
-            <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q2436XH6X2"></script>
-            <script>
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-
-              gtag('config', 'G-Q2436XH6X2');
-            </script>
             <script> 
                 const playIcon = `
                 	          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#3D3132">
