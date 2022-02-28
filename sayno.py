@@ -91,10 +91,6 @@ def get_bottom_html():
     bottom_html = """
         </table>
     <hr/>
-     <div class="gocenter">
-        <img src="images/qr_code.png" alt="saynotoskiing" style="max-width:100%;height:auto;">
-    </div>
-    <hr/>
     <div class="goright">
         <b>PPC</b>
     </div>
@@ -122,9 +118,7 @@ def get_top_html():
                 .welcometo1985 { width: 100%; border-spacing: 0; }
                 
                 div.goright { text-align: right; } 
-                
-                div.gocenter { text-align: center; } 
-                
+              
                 .play { vertical-align: middle; margin-bottom: 8px; width: 44px; height: 44px; }
 				
 				.leftPad { margin-left: 16px; }
