@@ -32,6 +32,7 @@ def get_word_dict():
     "Slowly":"man manda",
     "Snow":"sue eh",
     "Snowboard":"dahn bahn",
+    "So-So (horse tiger)":"mamahuhu",
     "Sorry":"dwi buh chee",
     "Thank you":"sieh sieh",
     "What is your name?":"knee jow shehn mah",
