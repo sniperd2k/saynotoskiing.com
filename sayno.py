@@ -24,7 +24,7 @@ def get_word_dict():
     "Look up":"tai toe",
     "Me/I":"wah",
     "Not good":"bu how",
-    "Need/Want":"yao",
+    "Need":"she yao",
     "Patience":"neigh xeen",
     "Push":"tway",
     "Right side":"yo bien",
