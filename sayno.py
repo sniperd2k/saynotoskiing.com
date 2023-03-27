@@ -6,6 +6,7 @@ def get_word_dict():
     "Awesome (strong skill)":"lee high",
     "Awesome! (666)":"leo leo leo",
     "Bad ass":"new bee",
+    "Cheers":"gun bay"
     "Chinese":"jong when",
     "Correct":"du way",
     "Do you have any questions?":"knee yo when tea mah",
