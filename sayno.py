@@ -103,7 +103,7 @@ def get_bottom_html():
     
     
     <div>
-        <li style="color:green;">green</li>
+        <li style="color:green;">green - never ever</li>
             <ul>
                 <li>introduce self and ask names</li>
                 <li>introduce board/bindings</li>
@@ -113,14 +113,14 @@ def get_bottom_html():
                 <li>one footed stopping</li>
                 <li>one footed j-turns</li>
             </ul>
-        <li style="color:green;">green plus</li>
+        <li style="color:green;">green plus - has been introduced to snowboarding</li>
             <ul>
                 <li>two footed side slipping to directional change</li>
                 <li>garlands progressing to j-turns</li>
                 <li>j-turns with traverse, beginning to link</li>
                 <li>comfortable on surface lifts</li>
             </ul>
-        <li>white</li>
+        <li>white - advanced beginner</li>
             <ul>
                 <li>single C turns from toe to heel and heel to toe</li>
                 <li>basic S turns using crossover movements</li>
@@ -130,7 +130,7 @@ def get_bottom_html():
                 <li>introduce early edge engagement</li>
                 <li>introduce nose press and tail press</li>
             </ul>
-        <li style="color:yellow;">yellow</li>
+        <li style="color:yellow;">yellow - beginner/intermediate</li>
             <ul>
                 <li>introduce blue terrian/revist twist/maximum extention at edge change</li> 
                 <li>introduce carving</li>
@@ -139,7 +139,7 @@ def get_bottom_html():
                 <li>introduce ollies/nollies</li>
                 <li>introduce park boxes/rails</li>   
             </ul> 
-        <li style="color:blue;">blue</li>
+        <li style="color:blue;">blue - advanced intermediate</li>
             <ul>
                 <li>introduce maximum flexion at edge change in skidded turns</li>
                 <li>introduce maximum flexion at edge change in carved turns</li>
@@ -151,7 +151,7 @@ def get_bottom_html():
                 <li>180s nose rolls/tail rolls</li>
                 <li>straight airs</li>
             </ul>         
-        <li>black</li>
+        <li>black - advanced</li>
             <ul>
                 <li>introduct black terrain</li>
                 <li>refine skidded turn being most flexed at edge change</li>
