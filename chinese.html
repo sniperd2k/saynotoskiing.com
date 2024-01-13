@@ -2,7 +2,6 @@
 <html>
     <head>
         <title>PPC fun first</title>
-        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <style>
                 * {
@@ -18,9 +17,7 @@
                 .welcometo1985 { width: 100%; border-spacing: 0; }
                 
                 div.goright { text-align: right; } 
-                
-                div.gocenter { text-align: center; } 
-                
+              
                 .play { vertical-align: middle; margin-bottom: 8px; width: 44px; height: 44px; }
 				
 				.leftPad { margin-left: 16px; }
@@ -32,15 +29,6 @@
                 .player-button { background-color: transparent; border: 0; cursor: pointer; padding: 0; width: 3em; height: 3em; }
 
             </style>
-            <!-- Global site tag (gtag.js) - Google Analytics -->
-            <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q2436XH6X2"></script>
-            <script>
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-
-              gtag('config', 'G-Q2436XH6X2');
-            </script>
             <script> 
                 const playIcon = `
                 	          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#3D3132">
@@ -81,7 +69,7 @@
             <tr>
                 <td class="english"><span>Awesome! (666)</span></td>
                 <td class="phonetic" onclick="toggleAudio('awesome666.mp3')">
-                    <span class="leftPad">leo leo leo</span>
+                    <span class="leftPad">lel lel lel</span>
                     <div class="audio-player">
                         <div class="controls">
                             <audio id="awesome666.mp3" src="./sounds/awesome666.mp3" onended="audioEnded('awesome666.mp3button')"></audio>
@@ -98,11 +86,6 @@
             <tr>
                 <td class="english"><span>Bad ass</span></td>
                 <td class="phonetic"><span class="leftPad">new bee</span></td>
-                </tr>
-            
-            <tr>
-                <td class="english"><span>Cheers</span></td>
-                <td class="phonetic"><span class="leftPad">gun bay</span></td>
                 </tr>
             
             <tr>
@@ -152,11 +135,6 @@
             <tr>
                 <td class="english"><span>Fun</span></td>
                 <td class="phonetic"><span class="leftPad">how wahn</span></td>
-                </tr>
-            
-            <tr>
-                <td class="english"><span>Garbage</span></td>
-                <td class="phonetic"><span class="leftPad">la ztee</span></td>
                 </tr>
             
             <tr>
@@ -263,9 +241,21 @@
                 </tr>
             
             <tr>
-                <td class="english"><span>Need</span></td>
-                <td class="phonetic"><span class="leftPad">she yao</span></td>
-                </tr>
+                <td class="english"><span>Need/Want</span></td>
+                <td class="phonetic" onclick="toggleAudio('needwant.mp3')">
+                    <span class="leftPad">yao</span>
+                    <div class="audio-player">
+                        <div class="controls">
+                            <audio id="needwant.mp3" src="./sounds/needwant.mp3" onended="audioEnded('needwant.mp3button')"></audio>
+                            <button id="needwant.mp3button" class="player-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#3D3132">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
             
             <tr>
                 <td class="english"><span>Not good</span></td>
@@ -278,18 +268,13 @@
                 </tr>
             
             <tr>
-                <td class="english"><span>Push</span></td>
-                <td class="phonetic"><span class="leftPad">tway</span></td>
-                </tr>
-            
-            <tr>
                 <td class="english"><span>Right side</span></td>
                 <td class="phonetic"><span class="leftPad">yo bien</span></td>
                 </tr>
             
             <tr>
                 <td class="english"><span>Ski</span></td>
-                <td class="phonetic"><span class="leftPad">hwah bahn</span></td>
+                <td class="phonetic"><span class="leftPad">hwah sooyeh</span></td>
                 </tr>
             
             <tr>
@@ -320,11 +305,6 @@
                 </tr>
             
             <tr>
-                <td class="english"><span>So-So (horse horse tiger tiger)</span></td>
-                <td class="phonetic"><span class="leftPad">mama who who</span></td>
-                </tr>
-            
-            <tr>
                 <td class="english"><span>Sorry</span></td>
                 <td class="phonetic" onclick="toggleAudio('sorry.mp3')">
                     <span class="leftPad">dwi buh chee</span>
@@ -344,11 +324,6 @@
             <tr>
                 <td class="english"><span>Thank you</span></td>
                 <td class="phonetic"><span class="leftPad">sieh sieh</span></td>
-                </tr>
-            
-            <tr>
-                <td class="english"><span>There</span></td>
-                <td class="phonetic"><span class="leftPad">nah lee</span></td>
                 </tr>
             
             <tr>
@@ -401,84 +376,6 @@
             </tr>
             
         </table>
-    <hr/>
-     <div class="gocenter">
-        <img src="images/qr_code.png" alt="saynotoskiing" style="max-width:100%;height:auto;">
-    </div>
-    <hr/>
-    
-    <div>
-        <li style="color:green;">green</li>
-            <ul>
-                <li>introduce self and ask names</li>
-                <li>introduce board/bindings</li>
-                <li>go over stance/bindings</li>
-                <li>skating/gliding</li>
-                <li>one footed sideslips</li>
-                <li>one footed stopping</li>
-                <li>one footed j-turns</li>
-            </ul>
-        <li style="color:green;">green plus</li>
-            <ul>
-                <li>two footed side slipping to directional change</li>
-                <li>garlands progressing to j-turns</li>
-                <li>j-turns with traverse, beginning to link</li>
-                <li>comfortable on surface lifts</li>
-            </ul>
-        <li>white</li>
-            <ul>
-                <li>single C turns from toe to heel and heel to toe</li>
-                <li>basic S turns using crossover movements</li>
-                <li>start playing with flat spins 180s and 360s</li>
-                <li>introduce chair lift</li>
-                <li>refine turn shape using rotary movements/very turn size and shape</li>
-                <li>introduce early edge engagement</li>
-                <li>introduce nose press and tail press</li>
-            </ul>
-        <li style="color:yellow;">yellow</li>
-            <ul>
-                <li>introduce blue terrian/revist twist/maximum extention at edge change</li> 
-                <li>introduce carving</li>
-                <li>introduce basic switch</li>
-                <li>introduce bumps</li>
-                <li>introduce ollies/nollies</li>
-                <li>introduce park boxes/rails</li>   
-            </ul> 
-        <li style="color:blue;">blue</li>
-            <ul>
-                <li>introduce maximum flexion at edge change in skidded turns</li>
-                <li>introduce maximum flexion at edge change in carved turns</li>
-                <li>up unweighting/down unweighting</li>
-                <li>introduce fore/aft</li>
-                <li>refine switch on green</li>
-                <li>refine switch on green</li>                
-                <li>introduce glades</li>
-                <li>180s nose rolls/tail rolls</li>
-                <li>straight airs</li>
-            </ul>         
-        <li>black</li>
-            <ul>
-                <li>introduct black terrain</li>
-                <li>refine skidded turn being most flexed at edge change</li>
-                <li>refine turns with maximum flexion at edge change</li>
-                <li>refine bumps with maximum flexion at edge change</li>
-                <li>refine active and passive absorbtion in bumps</li>
-                <li>introduce active retraction</li>
-                <li>refine switch on blue terrain</li>
-                <li>introduce switch with maximum flexion at edge change</li>
-                <li>introduce switch carving</li>
-                <li>refine glade riding</li>
-                <li>practice varying turn radius and rythem on black terrain</li>
-                <li>introduce skidded turn with active retraction at edge change</li>
-                <li>intorduce turns with active retraction while being most flexed at edge change</li>
-                <li>introduce switch riding on black terrain</li>
-                <li>introduce turns in bumps with active retraction and maximum flexion at edge change</li>
-                <li>refine turns with actve retraction and maximum flexion at edge change</li>
-                <li>introduce switch with active retraction and maximum flexion at edge change</li>
-                <li>refine switch carving with active retraction</li>
-                <li>refine switch bump riding using active retraction</li>    
-            </ul>                              
-    </div>
     <hr/>
     <div class="goright">
         <b>PPC</b>

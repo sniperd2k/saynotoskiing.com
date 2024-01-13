@@ -100,6 +100,44 @@ def get_bottom_html():
         <img src="images/qr_code.png" alt="saynotoskiing" style="max-width:100%;height:auto;">
     </div>
     <hr/>
+    
+    <div>
+        <li style="color:green;">green</li>
+            <ul>
+                <li>introduce self and ask names</li>
+                <li>introduce board/bindings</li>
+                <li>go over stance/bindings</li>
+                <li>skating/gliding</li>
+                <li>one footed sideslips</li>
+                <li>one footed stopping</li>
+                <li>one footed j-turns</li>
+            </ul>
+        <li style="color:green;">green plus</li>
+            <ul>
+                <li>two footed side slipping to directional change</li>
+                <li>garlands progressing to j-turns</li>
+                <li>j-turns with traverse, beginning to link</li>
+                <li>comfortable on surface lifts</li>
+            </ul>
+        <li>white</li>
+            <ul>
+                <li>single C turns from toe to heel and heel to toe</li>    
+            </ul>
+        <li style="color:yellow;">yellow</li>
+            <ul>
+                <li>introduce blue terrian/revist twist/maximum extention at edge change</li>    
+            </ul> 
+        <li style="color:blue;">blue</li>
+            <ul>
+                <li>introduce maximum flexion at edge change in skidded turns</li>    
+            </ul>         
+        <li>black</li>
+            <ul>
+                <li>refine skidded turns being most flexed at edge change</li>    
+            </ul>         
+                     
+    </div>
+    <hr/>
     <div class="goright">
         <b>PPC</b>
     </div>
