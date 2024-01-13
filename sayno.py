@@ -4,8 +4,9 @@ import re
 def get_word_dict():
     unsorted_word_dict = {
     "Awesome (strong skill)":"lee high",
-    "Awesome! (666)":"lel lel lel",
+    "Awesome! (666)":"leo leo leo",
     "Bad ass":"new bee",
+    "Cheers":"gun bay",
     "Chinese":"jong when",
     "Correct":"du way",
     "Do you have any questions?":"knee yo when tea mah",
@@ -16,6 +17,7 @@ def get_word_dict():
     "How are you?":"knee how mah",
     "I am called ___":"wah jiao",
     "Is it very fun?":"how wahn mah",
+    "Garbage":"la ztee",
     "Goodbye":"zai jian",
     "Knee":"xee guy",
     "Left side":"zuo bian",
@@ -23,15 +25,18 @@ def get_word_dict():
     "Look up":"tai toe",
     "Me/I":"wah",
     "Not good":"bu how",
-    "Need/Want":"yao",
+    "Need":"she yao",
     "Patience":"neigh xeen",
+    "Push":"tway",
     "Right side":"yo bien",
-    "Ski":"hwah sooyeh",
+    "Ski":"hwah bahn",
     "Slowly":"man manda",
     "Snow":"sue eh",
     "Snowboard":"dahn bahn",
+    "So-So (horse horse tiger tiger)":"mama who who",
     "Sorry":"dwi buh chee",
     "Thank you":"sieh sieh",
+    "There":"nah lee",
     "What is your name?":"knee jow shehn mah",
     "You":"knee",
     "You're welcome":"buh kuh chee",
@@ -84,12 +89,54 @@ def main():
     middle_html = get_middle_html(word_dict)
     the_html = "".join([top_html, middle_html, bottom_html])
     print(the_html)
-    with open("chinese.html", "w") as file:
+    with open("index.html", "w") as file:
         file.write(the_html)
 
 def get_bottom_html():
     bottom_html = """
         </table>
+    <hr/>
+     <div class="gocenter">
+        <img src="images/qr_code.png" alt="saynotoskiing" style="max-width:100%;height:auto;">
+    </div>
+    <hr/>
+    
+    <div>
+        <li style="color:green;">green</li>
+            <ul>
+                <li>introduce self and ask names</li>
+                <li>introduce board/bindings</li>
+                <li>go over stance/bindings</li>
+                <li>skating/gliding</li>
+                <li>one footed sideslips</li>
+                <li>one footed stopping</li>
+                <li>one footed j-turns</li>
+            </ul>
+        <li style="color:green;">green plus</li>
+            <ul>
+                <li>two footed side slipping to directional change</li>
+                <li>garlands progressing to j-turns</li>
+                <li>j-turns with traverse, beginning to link</li>
+                <li>comfortable on surface lifts</li>
+            </ul>
+        <li>white</li>
+            <ul>
+                <li>single C turns from toe to heel and heel to toe</li>    
+            </ul>
+        <li style="color:yellow;">yellow</li>
+            <ul>
+                <li>introduce blue terrian/revist twist/maximum extention at edge change</li>    
+            </ul> 
+        <li style="color:blue;">blue</li>
+            <ul>
+                <li>introduce maximum flexion at edge change in skidded turns</li>    
+            </ul>         
+        <li>black</li>
+            <ul>
+                <li>refine skidded turns being most flexed at edge change</li>    
+            </ul>         
+                     
+    </div>
     <hr/>
     <div class="goright">
         <b>PPC</b>
@@ -103,6 +150,7 @@ def get_top_html():
 <html>
     <head>
         <title>PPC fun first</title>
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <style>
                 * {
@@ -118,7 +166,9 @@ def get_top_html():
                 .welcometo1985 { width: 100%; border-spacing: 0; }
                 
                 div.goright { text-align: right; } 
-              
+                
+                div.gocenter { text-align: center; } 
+                
                 .play { vertical-align: middle; margin-bottom: 8px; width: 44px; height: 44px; }
 				
 				.leftPad { margin-left: 16px; }
@@ -130,6 +180,15 @@ def get_top_html():
                 .player-button { background-color: transparent; border: 0; cursor: pointer; padding: 0; width: 3em; height: 3em; }
 
             </style>
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q2436XH6X2"></script>
+            <script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-Q2436XH6X2');
+            </script>
             <script> 
                 const playIcon = `
                 	          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#3D3132">
