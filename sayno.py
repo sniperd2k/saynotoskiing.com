@@ -96,11 +96,14 @@ def get_bottom_html():
     bottom_html = """
         </table>
     <hr/>
-     <div class="gocenter">
-        <img src="images/qr_code.png" alt="saynotoskiing" style="max-width:100%;height:auto;">
+    <div class="gocenter">
+    	<img src="images/qr_code.png" alt="saynotoskiing" style="max-width:100%;height:auto;">
     </div>
     <hr/>
-    
+    <div class="gocenter">
+    	<img src="images/grabs.jpg" alt="saynotoskiing" style="max-width:100%;height:auto;">
+    </div>
+    <hr/>
     
     <div>
         <li style="color:green;">green - never ever</li>
