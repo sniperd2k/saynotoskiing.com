@@ -133,7 +133,7 @@ def get_bottom_html():
                 <li>introduce early edge engagement</li>
                 <li>introduce nose press and tail press</li>
             </ul>
-        <li style="color:yellow;">yellow - beginner/intermediate</li>
+        <li style="color:#FFD700;">yellow - beginner/intermediate</li>
             <ul>
                 <li>introduce blue terrian/revist twist/maximum extention at edge change</li> 
                 <li>introduce carving</li>
