@@ -156,13 +156,37 @@
             
             <tr>
                 <td class="english"><span>Garbage</span></td>
-                <td class="phonetic"><span class="leftPad">la ztee</span></td>
-                </tr>
+                <td class="phonetic" onclick="toggleAudio('garbage.mp3')">
+                    <span class="leftPad">la ztee</span>
+                    <div class="audio-player">
+                        <div class="controls">
+                            <audio id="garbage.mp3" src="./sounds/garbage.mp3" onended="audioEnded('garbage.mp3button')"></audio>
+                            <button id="garbage.mp3button" class="player-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#3D3132">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
             
             <tr>
                 <td class="english"><span>Goodbye</span></td>
-                <td class="phonetic"><span class="leftPad">zai jian</span></td>
-                </tr>
+                <td class="phonetic" onclick="toggleAudio('goodbye.mp3')">
+                    <span class="leftPad">zai jian</span>
+                    <div class="audio-player">
+                        <div class="controls">
+                            <audio id="goodbye.mp3" src="./sounds/goodbye.mp3" onended="audioEnded('goodbye.mp3button')"></audio>
+                            <button id="goodbye.mp3button" class="player-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#3D3132">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
             
             <tr>
                 <td class="english"><span>Hello</span></td>
@@ -264,8 +288,20 @@
             
             <tr>
                 <td class="english"><span>Need</span></td>
-                <td class="phonetic"><span class="leftPad">she yao</span></td>
-                </tr>
+                <td class="phonetic" onclick="toggleAudio('need.mp3')">
+                    <span class="leftPad">she yao</span>
+                    <div class="audio-player">
+                        <div class="controls">
+                            <audio id="need.mp3" src="./sounds/need.mp3" onended="audioEnded('need.mp3button')"></audio>
+                            <button id="need.mp3button" class="player-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#3D3132">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
             
             <tr>
                 <td class="english"><span>Not good</span></td>
@@ -348,8 +384,20 @@
             
             <tr>
                 <td class="english"><span>There</span></td>
-                <td class="phonetic"><span class="leftPad">nah lee</span></td>
-                </tr>
+                <td class="phonetic" onclick="toggleAudio('there.mp3')">
+                    <span class="leftPad">nah lee</span>
+                    <div class="audio-player">
+                        <div class="controls">
+                            <audio id="there.mp3" src="./sounds/there.mp3" onended="audioEnded('there.mp3button')"></audio>
+                            <button id="there.mp3button" class="player-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#3D3132">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
             
             <tr>
                 <td class="english"><span>Tired</span></td>
@@ -402,16 +450,17 @@
             
         </table>
     <hr/>
-     <div class="gocenter">
-        <img src="images/qr_code.png" alt="saynotoskiing" style="max-width:100%;height:auto;">
+    <div class="gocenter">
+    	<img src="images/qr_code.png" alt="saynotoskiing" style="max-width:100%;height:auto;">
     </div>
     <hr/>
-     <div class="gocenter">
-        <img src="images/grabs.jpg" alt="saynotoskiing" style="max-width:100%;height:auto;">
+    <div class="gocenter">
+    	<img src="images/grabs.jpg" alt="saynotoskiing" style="max-width:100%;height:auto;">
     </div>
     <hr/>
+    
     <div>
-        <li style="color:green;">green</li>
+        <li style="color:green;">green - never ever</li>
             <ul>
                 <li>introduce self and ask names</li>
                 <li>introduce board/bindings</li>
@@ -421,14 +470,14 @@
                 <li>one footed stopping</li>
                 <li>one footed j-turns</li>
             </ul>
-        <li style="color:green;">green plus</li>
+        <li style="color:green;">green plus - has been introduced to snowboarding</li>
             <ul>
                 <li>two footed side slipping to directional change</li>
                 <li>garlands progressing to j-turns</li>
                 <li>j-turns with traverse, beginning to link</li>
                 <li>comfortable on surface lifts</li>
             </ul>
-        <li>white</li>
+        <li>white - advanced beginner</li>
             <ul>
                 <li>single C turns from toe to heel and heel to toe</li>
                 <li>basic S turns using crossover movements</li>
@@ -438,7 +487,7 @@
                 <li>introduce early edge engagement</li>
                 <li>introduce nose press and tail press</li>
             </ul>
-        <li style="color:#FFD700;">yellow</li>
+        <li style="color:#FFD700;">yellow - beginner/intermediate</li>
             <ul>
                 <li>introduce blue terrian/revist twist/maximum extention at edge change</li> 
                 <li>introduce carving</li>
@@ -447,7 +496,7 @@
                 <li>introduce ollies/nollies</li>
                 <li>introduce park boxes/rails</li>   
             </ul> 
-        <li style="color:blue;">blue</li>
+        <li style="color:blue;">blue - advanced intermediate</li>
             <ul>
                 <li>introduce maximum flexion at edge change in skidded turns</li>
                 <li>introduce maximum flexion at edge change in carved turns</li>
@@ -459,7 +508,7 @@
                 <li>180s nose rolls/tail rolls</li>
                 <li>straight airs</li>
             </ul>         
-        <li>black</li>
+        <li>black - advanced</li>
             <ul>
                 <li>introduct black terrain</li>
                 <li>refine skidded turn being most flexed at edge change</li>
@@ -482,6 +531,7 @@
                 <li>refine switch bump riding using active retraction</li>    
             </ul>                              
     </div>
+    
     <hr/>
     <div class="goright">
         <b>PPC</b>
