@@ -112,6 +112,7 @@ def get_bottom_html():
                 <li>introduce board/bindings</li>
                 <li>go over stance/bindings</li>
                 <li>skating/gliding</li>
+                <li>straight glides</li>
                 <li>one footed sideslips</li>
                 <li>one footed stopping</li>
                 <li>one footed j-turns</li>
@@ -127,6 +128,7 @@ def get_bottom_html():
             <ul>
                 <li>single C turns from toe to heel and heel to toe</li>
                 <li>basic S turns using crossover movements</li>
+                <li><b>up to here for AASI level 1</b></li>
                 <li>start playing with flat spins 180s and 360s</li>
                 <li>introduce chair lift</li>
                 <li>refine turn shape using rotary movements/very turn size and shape</li>
