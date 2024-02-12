@@ -176,6 +176,41 @@ def get_bottom_html():
             </ul>                              
     </div>
     <hr/>
+        
+    <div>
+        <li>Technical</li>
+            <ul>        
+                <li>Control the relationship of the center of mass to the base of support to direct pressure along the length of the board</li>
+                <li>Control the relationship of the center of mass to the base of support to direct pressure along the width of the board</li>
+                <li>Control the magnitude of pressure created through the board/surface interaction</li>
+                <li>Control the board's pivot through flexion/extension and rotation of the body</li>
+                <li>Control the board's tilt through a combination of inclination and angulation</li> 
+                <li>Control torsional flex (twist) of the board using flexion/extension and rotation of the body</li>
+            </ul>
+        <li>People</li>
+            <ul>        
+                <li>Develop relationships based on trust</li>
+                <li>Engage in meaningful two-way communication</li>
+                <li>Identify, understand, and manage your emotions and actions</li>
+                <li>Recognize and influence the behaviors, motivations, and emotions of others</li>
+            </ul>
+        <li>Teaching</li>
+            <ul>        
+                <li>Collaborate on long-term goals and short-term objectives</li>
+                <li>Manage information, activities, terrain selection, and pacing</li>
+                <li>Promote play, experimentation, and exploration</li>
+                <li>Facilitate the learner's ability to reflect upon experiences and sensations</li>
+                <li>Adapt to the changing needs of the learner</li>
+                <li>Manage emotional and physical risk</li>
+            </ul>
+        <li>Professional</li> 
+            <ul>
+                <li>Convey and apply accurate technical information</li>
+                <li>Observe, evaluate, and prescribe (through movement analysis)</li>
+            </ul>   
+    </div>
+
+    <hr/>
     <div class="gocenter">
     	<img src="images/qr_code.png" alt="saynotoskiing" style="max-width:100%;height:auto;">
     </div>
