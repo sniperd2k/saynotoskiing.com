@@ -203,7 +203,7 @@ def get_bottom_html():
                 <li>Adapt to the changing needs of the learner</li>
                 <li>Manage emotional and physical risk</li>
             </ul>
-        <li>Professional</li> 
+        <li>Professional Knowledge</li> 
             <ul>
                 <li>Convey and apply accurate technical information</li>
                 <li>Observe, evaluate, and prescribe (through movement analysis)</li>
