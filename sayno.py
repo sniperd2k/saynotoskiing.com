@@ -3,9 +3,12 @@ import re
 
 def get_word_dict():
     unsorted_word_dict = {
+    "Athletic Stance (kung foo stance)":"mah boo",
     "Awesome (strong skill)":"lee high",
     "Awesome! (666)":"leo leo leo",
-    "Bad ass":"new bee",
+    "Awesome (very)":"baah",
+    #"Bad ass":"new bee",
+    "Bend":"one",
     "Cheers":"gun bay",
     "Chinese":"jong when",
     "Correct":"du way",
