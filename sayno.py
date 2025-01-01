@@ -152,7 +152,6 @@ def get_bottom_html():
                 <li>up unweighting/down unweighting</li>
                 <li>introduce fore/aft</li>
                 <li>refine switch on green</li>
-                <li>refine switch on green</li>                
                 <li>introduce glades</li>
                 <li>180s nose rolls/tail rolls</li>
                 <li>straight airs</li>
