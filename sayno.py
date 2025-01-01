@@ -127,7 +127,9 @@ def get_bottom_html():
             <ul>
                 <li>single C turns from toe to heel and heel to toe</li>
                 <li>basic S turns using crossover movements</li>
+                <!--
                 <li><b>up to here for AASI level 1</b></li>
+                -->
                 <li>start playing with flat spins 180s and 360s</li>
                 <li>introduce chair lift</li>
                 <li>refine turn shape using rotary movements/very turn size and shape</li>
