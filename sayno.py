@@ -3,13 +3,15 @@ import re
 
 def get_word_dict():
     unsorted_word_dict = {
+    "Agree":"tone yee",
     "Athletic Stance (kung foo stance)":"mah boo",
     "Awesome (strong skill)":"lee high",
     "Awesome! (666)":"leo leo leo",
     "Awesome (very)":"baah",
     #"Bad ass":"new bee",
     "Bend":"one",
-    "Cheers":"gun bay",
+    "Bottoms Up (cheers)":"gun bay",
+    "Cheering!":"shja yo",
     "Chinese":"jong when",
     "Correct":"du way",
     "Do you have any questions?":"knee yo when tea mah",
@@ -27,6 +29,7 @@ def get_word_dict():
     "Look":"kahn",
     "Look up":"tai toe",
     "Me/I":"wah",
+    "No/Nah":"mayo",
     "Not good":"bu how",
     "Need":"she yao",
     "Patience":"neigh xeen",
