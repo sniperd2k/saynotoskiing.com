@@ -5,9 +5,8 @@ def get_word_dict():
     unsorted_word_dict = {
     "Agree":"tone yee",
     "Athletic Stance (kung foo stance)":"mah boo",
-    "Awesome (strong skill)":"lee high",
+    "Awesome (strong skill/talented)":"lee high",
     "Awesome! (666)":"leo leo leo",
-    "Awesome (very)":"baah",
     #"Bad ass":"new bee",
     "Bend":"one",
     "Bottoms Up (cheers)":"gun bay",
