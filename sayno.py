@@ -52,13 +52,14 @@ def get_word_dict():
     word_dict = dict(sorted(unsorted_word_dict.items()))
     return word_dict
     
-def get_middle_html(word_dict):
-    middle_html = ""
+def get_language_html():
+    word_dict = get_word_dict()
+    html = "<table class='welcometo1985'>"
     for english, phonetic in word_dict.items():
         file_name = "".join([re.sub("[^A-Za-z0-9]", "", english), ".mp3"]).lower()
         if os.path.isfile("".join(["sounds/", file_name])):
             button_id = file_name + "button"
-            middle_html = "".join([middle_html, 
+            html = "".join([html, 
             '''
             <tr>
                 <td class="english"><span>''', english, '''</span></td>
@@ -78,29 +79,28 @@ def get_middle_html(word_dict):
             </tr>
             '''])
         else:
-            middle_html = "".join([middle_html, 
+            html = "".join([html, 
             '''
             <tr>
                 <td class="english"><span>''', english, '''</span></td>
                 <td class="phonetic"><span class="leftPad">''', phonetic, '''</span></td>
                 </tr>
             '''])
-    return middle_html
+    html = "".join([html, "</table>"])            
+    return html
 
 def main():
     top_html = get_top_html()
-    bottom_html = get_bottom_html()
-    word_dict = get_word_dict()
-    middle_html = get_middle_html(word_dict)
-    the_html = "".join([top_html, middle_html, bottom_html])
+    language_html = get_language_html()
+    instruction_html = get_instruction_html()
+    footer_html = get_footer_html()
+    the_html = "".join([top_html, instruction_html, language_html, footer_html])
     print(the_html)
     with open("index.html", "w") as file:
         file.write(the_html)
 
-def get_bottom_html():
-    bottom_html = """
-        </table>
-    <hr/>
+def get_instruction_html():
+    html = """
     <div class="gocenter">
     	<img src="images/grabs.jpg" alt="saynotoskiing" style="max-width:100%;height:auto;">
     </div>
@@ -217,6 +217,12 @@ def get_bottom_html():
     </div>
 
     <hr/>
+"""
+    return html
+
+def get_footer_html():
+    html = """
+    <hr/>
     <div class="gocenter">
     	<img src="images/qr_code.png" alt="saynotoskiing" style="max-width:100%;height:auto;">
     </div>
@@ -225,11 +231,12 @@ def get_bottom_html():
         <b>PPC</b>
     </div>
     </body>
-</html>"""
-    return bottom_html
+    </html>
+    """
+    return html
 
 def get_top_html():
-    top_html = """
+    html = """
 <html>
     <head>
         <title>PPC fun first</title>
@@ -302,9 +309,8 @@ def get_top_html():
             </script>
     </head>
     <body>
-        <table class="welcometo1985">    
     """
-    return top_html
+    return html
 
 if __name__ == '__main__':
     main()
